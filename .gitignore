@@ -46,9 +46,7 @@ graphify-out/
 
 # Temporary / one-off scripts and docs
 开发调试细节资料（AI读取）/
-docs/
 fix-*.js
-MARKDOWN-STYLE.md
 工作进展与计划汇报.md
 
 # Claude Code worktrees
