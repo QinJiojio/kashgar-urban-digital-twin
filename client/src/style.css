@@ -1,0 +1,78 @@
+/* ==========================================
+   Kashi Urban Digital Twin — Design Tokens
+   CSS 自定义属性体系，全站所有颜色/圆角/间距的唯一来源
+   ========================================== */
+
+:root {
+  /* ── 底色层级（由深到浅）── */
+  --color-floor: #020617;
+  --color-surface: rgba(15, 23, 42, 0.92);
+  --color-elevated: rgb(20, 29, 49);
+
+  /* ── 文字 ── */
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+
+  /* ── 强调色（仅描边/焦点/状态信号，不做大填充）── */
+  --color-accent: #38bdf8;
+
+  /* ── 圆角（3 档，全站统一）── */
+  --radius-control: 4px;
+  --radius-panel: 8px;
+  --radius-modal: 12px;
+
+  /* ── 间距（4px 基准）── */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+
+  /* ── 蚀刻质感（Inscribed Depth）── */
+  --border-etched: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 0 1px rgba(56, 189, 248, 0.12);
+  --border-etched-strong: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 0 1px rgba(56, 189, 248, 0.25);
+  --glow-active: 0 0 0 2px rgba(56, 189, 248, 0.3);
+  --shadow-panel: 0 8px 24px rgba(2, 6, 23, 0.6);
+  --shadow-modal: 0 12px 32px rgba(0, 0, 0, 0.8);
+
+  /* ── 字体（系统栈，零外部依赖）── */
+  --font-body: Microsoft YaHei, PingFang SC, system-ui, -apple-system, sans-serif;
+  --font-data: ui-monospace, SF Mono, Consolas, Courier New, monospace;
+}
+
+/* ── 全局重置 ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--color-floor);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── 基础元素 ── */
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ── 滚动条（暗色主题统一）── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-floor); }
+::-webkit-scrollbar-thumb { background: var(--text-secondary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+* { scrollbar-color: var(--text-secondary) var(--color-floor); }
