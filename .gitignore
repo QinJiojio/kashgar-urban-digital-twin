@@ -27,43 +27,18 @@ dist-ssr
 # Vite cache
 .vite
 
-# Claude Code personal settings (permissions, preferences)
-.claude/settings*
-
 # Environment
 .env
 .env.local
 .env.*.local
 
-# User accounts (contains bcrypt hashes, deploy from users.example.json)
+# User accounts (contains bcrypt hashes)
 server/users.json
 
 # Generated artifacts
-graphify-out/
 *.xlsx
-!cesium-mvp-功能清单-v3.xlsx
 ~$*
 
-# Temporary / one-off scripts and docs
-开发调试细节资料（AI读取）/
-fix-*.js
-工作进展与计划汇报.md
-
-# Claude Code worktrees
-.claude/worktrees/
-
 # TLS certificates (contains private keys)
-certs/
-
-# Claude Code / superpowers 工具（个人工具，非项目代码）
-.claude/skills/
-.agents/
-skills-lock.json
-
-# 环境变量未展开误建的临时目录
-$CLAUDE_JOB_DIR/
-
-# 运行时版本数据（要素/图层版本号，运行时自动重建，不入库；dev/prod 各自独立）
-server/feature_versions.json
 server/key.pem
 server/cert.pem
